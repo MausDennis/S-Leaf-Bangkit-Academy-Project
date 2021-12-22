@@ -1,0 +1,61 @@
+swagger: "2.0"
+
+info:
+  title: "S-Leaf"
+  version: "1.0"
+
+host: "sleaf.endpoints.daun-314815.cloud.goog"
+x-google-endpoints:
+- name: "sleaf.endpoints.daun-314815.cloud.goog"
+  target: "35.238.247.171"
+schemes:
+  - "http"
+
+paths:
+  "/":
+    get:
+      description: "Greeting"
+      operationId: "home"
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+        400:
+          description: "Client error."
+  
+  "/random":
+    get:
+      description: "Get random plant info."
+      operationId: "random"
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+        400:
+          description: "Client error."
+    
+  "/all":
+    get:
+      description: " Get all info."
+      operationId: "all"
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+        400:
+          description: "Client error."
+
+  "/upload":
+    post:
+      description: "Upload and get predict"
+      operationId: "upload"
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+        400:
+          description: "Client error."
